@@ -125,8 +125,6 @@ export default function Home() {
                   </figcaption>
                 </figure>
               </div>
-
-              <!-- More testimonials... -->
             </div>
           </div>
         </div>
