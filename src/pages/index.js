@@ -3,6 +3,8 @@ import { Faq } from "@/components/Faq";
 import { Features } from "@/components/Features";
 import { Hero } from "@/components/Hero";
 import { Testimonials } from "@/components/Testimonials";
+import GraphQL from "@/graphql";
+
 
 export async function getStaticProps() {
   const data = await GraphQL.query(`
