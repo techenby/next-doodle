@@ -1,6 +1,6 @@
 class GraphQL {
 
-    static endpoint = 'http://doodle.test/graphql';
+    static endpoint = process.env.GRAPHQL_URL;
 
     static async query(query) {
         const headers = {
