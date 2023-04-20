@@ -84,11 +84,11 @@ export async function getStaticProps() {
 export default function Home({ entry, features, posts, testimonials, faq }) {
   return (
     <main>
-      <Hero />
-      <Features />
-      <Testimonials />
-      <Blog />
-      <Faq />
+      <Hero heading={entry.heading} subheading={entry.subheading} />
+      <Features features={features} />
+      <Testimonials testimonials={testimonials} />
+      <Blog posts={posts} />
+      <Faq faq={faq} />
     </main>
   )
 }
