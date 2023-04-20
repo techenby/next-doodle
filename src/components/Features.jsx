@@ -1,4 +1,4 @@
-export function Features() {
+export function Features({ features }) {
     return (
         <section id="features" className="bg-white">
             <div className="mx-auto max-w-7xl py-24 px-6 sm:py-32 lg:px-8 lg:py-40">
@@ -8,15 +8,17 @@ export function Features() {
                 </div>
 
                 <dl className="mt-20 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8">
+                    {features.map(feature => (
                     <div className="relative">
                         <dt>
                             <svg className="absolute mt-1 h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                             </svg>
-                            <p className="ml-10 text-lg font-semibold leading-8 text-gray-900">Create and Edit Notes</p>
+                            <p className="ml-10 text-lg font-semibold leading-8 text-gray-900">{feature.title}</p>
                         </dt>
-                        <dd className="mt-2 ml-10 text-base leading-7 text-gray-600">Users can create and edit notes in a variety of formats (text, audio, video, image) and organize them using tags or folders.</dd>
+                        <dd className="mt-2 ml-10 text-base leading-7 text-gray-600">{feature.description}</dd>
                     </div>
+                    ))}
                 </dl>
             </div>
         </section>
