@@ -11,7 +11,7 @@ export function Blog({ posts }) {
                 </div>
                 <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
                     {posts.map(post => (
-                    <div className="flex flex-col overflow-hidden rounded-lg shadow-lg">
+                    <div key={post.entry_id} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
                         <div className="flex-shrink-0">
                             <img className="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="" />
                         </div>
@@ -19,7 +19,7 @@ export function Blog({ posts }) {
                             <div className="flex-1">
                                 <p className="text-sm font-medium text-amber-600">
                                     {post.categories.map(category => (
-                                        <a href="#" className="hover:underline">{category.cat_name}</a>
+                                        <a href="#" key={category.entry_id} className="hover:underline">{category.cat_name}</a>
                                     ))}
                                 </p>
                                 <a href="#" className="mt-2 block">

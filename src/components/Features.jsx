@@ -9,7 +9,7 @@ export function Features({ features }) {
 
                 <dl className="mt-20 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8">
                     {features.map(feature => (
-                    <div className="relative">
+                    <div key={feature.entry_id} className="relative">
                         <dt>
                             <svg className="absolute mt-1 h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />

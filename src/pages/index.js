@@ -34,6 +34,7 @@ export async function getStaticProps() {
           description
           entry_date
           categories {
+            cat_id
             cat_name
           }
           author {
