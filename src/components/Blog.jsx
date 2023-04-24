@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Blog({ posts }) {
     return (
         <section id="blog" className="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
@@ -13,7 +15,13 @@ export function Blog({ posts }) {
                     {posts.map(post => (
                     <div key={post.entry_id} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
                         <div className="flex-shrink-0">
-                            <img className="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="" />
+                            <Image
+                                className="h-48 w-full object-cover"
+                                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                                alt="Landscape picture"
+                                width={1920}
+                                height={1280}
+                            />
                         </div>
                         <div className="flex flex-1 flex-col justify-between bg-white p-6">
                             <div className="flex-1">
@@ -31,7 +39,13 @@ export function Blog({ posts }) {
                                 <div className="flex-shrink-0">
                                     <a href="#">
                                         <span className="sr-only">{post.author.screen_name}</span>
-                                        <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+                                        <Image
+                                            className="h-10 w-10 rounded-full"
+                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                            alt="Avatar"
+                                            width={25}
+                                            height={25}
+                                        />
                                     </a>
                                 </div>
                                 <div className="ml-3">
