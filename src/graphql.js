@@ -4,7 +4,8 @@ class GraphQL {
 
     static async query(query) {
         const headers = {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + process.env.GRAPHQL_TOKEN
         };
 
         const response = await fetch(this.endpoint, {
